@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Task_card from "./Task_card";
 
-const Task_Status = ({ Id }) => {
+const Task_Status = ({ Id, notify, inNumber }) => {
   const [data, SetData] = useState(null);
   const [resnt, setResnt] = useState([]);
 
@@ -17,11 +17,19 @@ const Task_Status = ({ Id }) => {
 
   useEffect(() => {
     const findData = data?.find((item) => Id === item.id);
-    if(findData){
+    //console.log(findData?.id);
+
+    if (findData) {
+      const filter = resnt.find((data) => findData.id == data.id);
+
+      if (!filter) {
         setResnt([...resnt, findData]);
+        notify();
+        inNumber();
+      } else {
+        //hello
+      }
     }
-    //console.log(resnt);
-    
   }, [Id]);
 
   //console.log(data);
@@ -31,9 +39,9 @@ const Task_Status = ({ Id }) => {
   //console.log(findData);
 
   return (
-    <div className="mb-10">
-      <div className="text-2xl font-bold">Task Status</div>
-      {resnt.length == 1 ? (
+    <div className="mb-10 w-80">
+      <div className="text-2xl font-bold mb-5">Task Status</div>
+      {resnt.length >= 1 ? (
         resnt.map((data) => <Task_card data={data}></Task_card>)
       ) : (
         <div className="text-gray-500 mt-5">

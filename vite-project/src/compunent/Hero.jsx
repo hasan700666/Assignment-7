@@ -2,7 +2,7 @@ import React from "react";
 import img1 from "../assets/vector1.png";
 import img2 from "../assets/vector2.png";
 
-const Hero = () => {
+const Hero = ({increaseNumber}) => {
   return (
     <div className="flex justify-center items-center">
       <div className="bg-linear-to-r text-white from-[#632EE3] to-[#9F62F2] mx-5 rounded-2xl text-center flex items-center">
@@ -11,7 +11,7 @@ const Hero = () => {
         </div>
         <div>
           <div className="text-xl">In-Progress</div>
-          <div className="text-6xl font-bold mt-5">0</div>
+          <div className="text-6xl font-bold mt-5">{increaseNumber}</div>
         </div>
         <div>
           <img src={img2} alt="" />
