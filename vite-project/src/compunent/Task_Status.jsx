@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Task_card from "./Task_card";
 
-const Task_Status = ({ Id, notify, inNumber }) => {
+const Task_Status = ({ Id, notify, inNumber, addResolved, reId,deNumber }) => {
   const [data, SetData] = useState(null);
   const [resnt, setResnt] = useState([]);
 
@@ -32,9 +32,15 @@ const Task_Status = ({ Id, notify, inNumber }) => {
     }
   }, [Id]);
 
+  useEffect(() => {
+    const filter = resnt.filter((data) => reId != data.id);
+
+    setResnt(filter);
+  }, [reId]);
+
   //console.log(data);
 
-  console.log(resnt);
+  //console.log(resnt);
 
   //console.log(findData);
 
@@ -42,7 +48,9 @@ const Task_Status = ({ Id, notify, inNumber }) => {
     <div className="mb-10 w-80">
       <div className="text-2xl font-bold mb-5">Task Status</div>
       {resnt.length >= 1 ? (
-        resnt.map((data) => <Task_card data={data}></Task_card>)
+        resnt.map((data) => (
+          <Task_card addResolved={addResolved} data={data} deNumber={deNumber}></Task_card>
+        ))
       ) : (
         <div className="text-gray-500 mt-5">
           Select a ticket to add to Task Status

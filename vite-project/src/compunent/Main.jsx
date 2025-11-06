@@ -7,7 +7,9 @@ import Resolved_Task from "./Resolved_Task";
 const Main = ({ notify }) => {
   const [data, SetData] = useState(null);
   const [Id, SetId] = useState(null);
+  const [reId, setReId] = useState(null);
   const [increaseNumber, setInNumber] = useState(0);
+  const [decreaseNumber, setDeNumber] = useState(0);
 
   useEffect(() => {
     async function fun() {
@@ -23,14 +25,29 @@ const Main = ({ notify }) => {
     SetId(data);
   };
 
+  const deNumber = () => {
+    setDeNumber(decreaseNumber + 1);
+    setInNumber(increaseNumber - 1);
+  };
+
   const inNumber = () => {
     setInNumber(increaseNumber + 1);
+  };
+
+  const addResolved = (id) => {
+    setReId(id);
+    deNumber();
+    const filter = data.filter((data) => id != data.id)
+    SetData(filter);
   };
 
   return (
     <div className="py-15 bg-gray-100 ">
       <div>
-        <Hero increaseNumber={increaseNumber}></Hero>
+        <Hero
+          increaseNumber={increaseNumber}
+          decreaseNumber={decreaseNumber}
+        ></Hero>
       </div>
       <div className="flex justify-between">
         <div className="m-20 mx-20">
@@ -47,8 +64,10 @@ const Main = ({ notify }) => {
             notify={notify}
             fun={fun}
             inNumber={inNumber}
+            addResolved={addResolved}
+            reId={reId}
           ></Task_Status>
-          <Resolved_Task></Resolved_Task>
+          <Resolved_Task reId={reId}></Resolved_Task>
         </div>
       </div>
     </div>
