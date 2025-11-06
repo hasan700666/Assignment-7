@@ -26,7 +26,7 @@ const Resolved_Task = ({ reId}) => {
       const Featchdata = await fetch("data.json");
       const res = await Featchdata.json();
       const filter = res.find((data) => reId == data.id);
-      console.log(filter);
+      //console.log(filter);
       
       SetData([...data, filter]);
     }
@@ -34,7 +34,7 @@ const Resolved_Task = ({ reId}) => {
     fun();
   }, [reId]);
 
-  console.log(data);
+  //console.log(data);
 
   return (
     <div className="mb-10 w-80">

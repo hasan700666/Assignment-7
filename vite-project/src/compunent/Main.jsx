@@ -4,7 +4,7 @@ import Customer_Tickets from "./Customer_Tickets";
 import Task_Status from "./Task_Status";
 import Resolved_Task from "./Resolved_Task";
 
-const Main = ({ notify }) => {
+const Main = ({ notify, notify_error, notify_error_2 }) => {
   const [data, SetData] = useState(null);
   const [Id, SetId] = useState(null);
   const [reId, setReId] = useState(null);
@@ -22,7 +22,11 @@ const Main = ({ notify }) => {
   }, []);
 
   const fun = (data) => {
-    SetId(data);
+    if (data == Id) {
+      notify_error_2();
+    } else {
+      SetId(data);
+    }
   };
 
   const deNumber = () => {
@@ -37,7 +41,7 @@ const Main = ({ notify }) => {
   const addResolved = (id) => {
     setReId(id);
     deNumber();
-    const filter = data.filter((data) => id != data.id)
+    const filter = data.filter((data) => id != data.id);
     SetData(filter);
   };
 
@@ -66,6 +70,7 @@ const Main = ({ notify }) => {
             inNumber={inNumber}
             addResolved={addResolved}
             reId={reId}
+            notify_error={notify_error}
           ></Task_Status>
           <Resolved_Task reId={reId}></Resolved_Task>
         </div>

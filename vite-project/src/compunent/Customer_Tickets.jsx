@@ -1,26 +1,48 @@
 //import React, { useState } from "react";
 // import { FaRegCircle } from "react-icons/fa";
 
-const Customer_Tickets = ({ data,fun }) => {
+const Customer_Tickets = ({ data, fun }) => {
   //console.log(data);
 
   //const [status,SetState] = useState(null)
 
   // const fun = () => {
-    
+
   // };
 
   return (
     <div className="bg-white p-5 w-[30vw] rounded-2xl">
-      <div onClick={()=>fun(data.id)}>
+      <div onClick={() => fun(data.id)}>
         <div className="flex justify-between">
           <div className="font-bold text-xl">{data.title}</div>
-          <div className="bg-green-200 py-1 px-3 rounded-2xl flex items-center text-xs">
-            <div className="rounded-full bg-green-600 px-1.5 mr-2 text-green-600">
-              h
-            </div>
-            <div>{data.status}</div>
-          </div>
+          {data.status == "Open" ? (
+            <>
+              <div className="bg-green-200 py-1 px-3 rounded-2xl flex items-center text-xs">
+                <div className="rounded-full bg-green-600 px-1 mr-2 text-green-600">
+                  h
+                </div>
+                <div>{data.status}</div>
+              </div>
+            </>
+          ) : data.status == "In Progress" ? (
+            <>
+              <div className="bg-yellow-200 py-1 px-3 rounded-2xl flex items-center text-xs">
+                <div className="rounded-full bg-yellow-600 px-1 mr-2 text-yellow-600">
+                  h
+                </div>
+                <div>{data.status}</div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="bg-red-200 py-1 px-3 rounded-2xl flex items-center text-xs">
+                <div className="rounded-full bg-red-600 px-1 mr-2 text-red-600">
+                  h
+                </div>
+                <div>{data.status}</div>
+              </div>
+            </>
+          )}
         </div>
         <div className="text-gray-500 py-3">{data.description}</div>
         <div className="flex justify-between items-center">

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Task_card from "./Task_card";
 
-const Task_Status = ({ Id, notify, inNumber, addResolved, reId,deNumber }) => {
+const Task_Status = ({ Id, notify, inNumber, addResolved, reId,deNumber ,notify_error }) => {
   const [data, SetData] = useState(null);
   const [resnt, setResnt] = useState([]);
 
@@ -27,7 +27,7 @@ const Task_Status = ({ Id, notify, inNumber, addResolved, reId,deNumber }) => {
         notify();
         inNumber();
       } else {
-        //hello
+        notify_error()
       }
     }
   }, [Id]);
