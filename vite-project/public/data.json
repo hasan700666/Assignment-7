@@ -1,0 +1,138 @@
+ 
+[ 
+  { 
+    "id": 1, 
+    "title": "Website Bug Report", 
+    "description": "Homepage carousel not loading properly on mobile devices.", 
+    "customer": "Acme Corp", 
+    "priority": "High", 
+    "status": "Open", 
+    "createdAt": "2025-11-01T10:30:00Z" 
+  }, 
+  { 
+    "id": 2, 
+    "title": "Feature Request - Dark Mode", 
+    "description": "Customer requested dark mode option in the dashboard.", 
+    "customer": "Beta Industries", 
+    "priority": "Medium", 
+    "status": "In Progress", 
+    "createdAt": "2025-10-28T14:45:00Z" 
+  }, 
+  { 
+    "id": 3, 
+    "title": "Billing Inquiry", 
+    "description": "Customer reported incorrect charges on last invoice.", 
+    "customer": "Gamma Solutions", 
+    "priority": "Low", 
+    "status": "Closed", 
+    "createdAt": "2025-10-15T09:15:00Z" 
+  }, 
+  { 
+    "id": 4, 
+    "title": "Account Access Issue", 
+    "description": "User unable to reset password using email link.", 
+    "customer": "Delta Systems", 
+    "priority": "High", 
+    "status": "Open", 
+    "createdAt": "2025-11-01T08:10:00Z" 
+  }, 
+  { 
+    "id": 5, 
+    "title": "Data Sync Delay", 
+    "description": "Inventory updates taking too long to appear on dashboard.", 
+    "customer": "Omega Retail", 
+    "priority": "Medium", 
+    "status": "In Progress", 
+    "createdAt": "2025-10-29T17:20:00Z" 
+  }, 
+  { 
+    "id": 6, 
+    "title": "Email Notification Error", 
+    "description": "System sending duplicate order confirmation emails.", 
+    "customer": "Nova Tech", 
+    "priority": "Low", 
+    "status": "Open", 
+    "createdAt": "2025-10-30T12:00:00Z" 
+  }, 
+  { 
+    "id": 7, 
+    "title": "Mobile App Crash", 
+    "description": "App crashes when opening reports tab on Android.", 
+    "customer": "Skyline Group", 
+    "priority": "High", 
+    "status": "In Progress", 
+    "createdAt": "2025-10-31T09:40:00Z" 
+  }, 
+  { 
+    "id": 8, 
+    "title": "Payment Gateway Timeout", 
+    "description": "Customer unable to complete checkout due to timeout.", 
+    "customer": "Urban Market", 
+    "priority": "High", 
+    "status": "Open", 
+    "createdAt": "2025-10-30T18:55:00Z" 
+  }, 
+  { 
+    "id": 9, 
+    "title": "UI Enhancement Suggestion", 
+    "description": "Request to make buttons more accessible for colorblind users.", 
+    "customer": "Eco Logistics", 
+    "priority": "Low", 
+    "status": "Closed", 
+    "createdAt": "2025-10-20T10:25:00Z" 
+  }, 
+  { 
+    "id": 10, 
+    "title": "Database Optimization", 
+    "description": "Reports taking too long to load; suggest index optimization.", 
+    "customer": "Helix Labs", 
+    "priority": "Medium", 
+    "status": "In Progress", 
+    "createdAt": "2025-10-22T15:15:00Z" 
+  }, 
+  { 
+    "id": 11, 
+    "title": "Security Patch Request", 
+    "description": "Customer requests update for the latest vulnerability fix.", 
+    "customer": "SecureOne", 
+    "priority": "High", 
+    "status": "Open", 
+    "createdAt": "2025-11-01T11:05:00Z" 
+  }, 
+  { 
+    "id": 12, 
+    "title": "API Documentation Feedback", 
+    "description": "Developers report missing examples for POST endpoints.", 
+    "customer": "CodeSphere", 
+    "priority": "Medium", 
+    "status": "Closed", 
+    "createdAt": "2025-10-26T13:50:00Z" 
+  }, 
+  { 
+    "id": 13, 
+    "title": "Subscription Renewal Problem", 
+    "description": "Automatic renewal not processed for annual subscribers.", 
+    "customer": "Visionary Media", 
+    "priority": "High", 
+    "status": "Open", 
+    "createdAt": "2025-10-31T07:35:00Z" 
+  }, 
+  { 
+    "id": 14, 
+    "title": "Localization Error", 
+    "description": "French translation missing for key labels on checkout page.", 
+    "customer": "Global Mart", 
+    "priority": "Low", 
+    "status": "In Progress", 
+    "createdAt": "2025-10-25T16:00:00Z" 
+  }, 
+  { 
+    "id": 15, 
+    "title": "Server Downtime Report", 
+    "description": "Customer experienced 15-minute outage during peak hours.", 
+    "customer": "Quantum Enterprises", 
+    "priority": "High", 
+    "status": "Closed", 
+    "createdAt": "2025-10-18T22:40:00Z" 
+  } 
+]
