@@ -11,7 +11,7 @@ const Customer_Tickets = ({ data, fun }) => {
   // };
 
   return (
-    <div className="bg-white p-5 w-[30vw] rounded-2xl">
+    <div className="bg-white p-5 xl:w-[30vw] rounded-2xl">
       <div onClick={() => fun(data.id)}>
         <div className="flex justify-between">
           <div className="font-bold text-xl">{data.title}</div>

@@ -37,7 +37,7 @@ const Resolved_Task = ({ reId}) => {
   //console.log(data);
 
   return (
-    <div className="mb-10 w-80">
+    <div className="mb-10 md:w-80">
       <div className="text-2xl font-bold mb-5">Resolved Task</div>
       {data?.length >= 1 ? (
         data?.map((data) => <Resolved_card data={data}></Resolved_card>)

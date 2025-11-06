@@ -45,7 +45,7 @@ const Task_Status = ({ Id, notify, inNumber, addResolved, reId,deNumber ,notify_
   //console.log(findData);
 
   return (
-    <div className="mb-10 w-80">
+    <div className="mb-10 md:w-80">
       <div className="text-2xl font-bold mb-5">Task Status</div>
       {resnt.length >= 1 ? (
         resnt.map((data) => (

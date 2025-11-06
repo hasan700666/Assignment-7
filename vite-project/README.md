@@ -1,16 +1,21 @@
-# React + Vite
+1. What is JSX, and why is it used?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ans: JSX হলো JavaScript XML file. JSX ব্যবহার করে আমরা সহজে UI তৈরি করতে পারি ।
 
-Currently, two official plugins are available:
+2. What is the difference between State and Props?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ans: state: component-এর নিজস্ব তথ্য বা status track করতে ব্যবহার করা হয় । এটিকে component-এর ভিতরে পরিবর্তন করা যায় ।
 
-## React Compiler
+props: parent থেকে child component-এ data পাঠাতে ব্যবহার করা হয় । parent থেকে যে data পাঠানো হয়, তা পরিবর্তন করা যায় না ।
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. What is the useState hook, and how does it work?
 
-## Expanding the ESLint configuration
+ans: useState হলো React-এর একটি hook যা কোনো data এর মান store করে রাখতে ব্যবহার করা হয় ।
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. How can you share state between components in React?
+
+ans: parent component-এ state declare করে child component-এ props আকারে পাঠানো । আবার Context API – ব্যবহার করে যেকোনো component access করা যায় ।
+
+5. How is event handling done in React?
+
+ans: React-এ function ব্যবহার করে event handle করা যায় ।

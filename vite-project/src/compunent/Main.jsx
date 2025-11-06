@@ -53,16 +53,16 @@ const Main = ({ notify, notify_error, notify_error_2 }) => {
           decreaseNumber={decreaseNumber}
         ></Hero>
       </div>
-      <div className="flex justify-between">
-        <div className="m-20 mx-20">
+      <div className="flex justify-between sm:flex-row flex-col">
+        <div className="xl:m-20 xl:mx-20 md:mx-10 md:m-15 mx-5 m-10">
           <div className="text-2xl font-bold mb-7 ">Customer Tickets</div>
-          <div className="grid grid-cols-2 gap-5">
+          <div className="lg:grid xl:grid-cols-2 lg:grid-cols-1 flex justify-center flex-col gap-5">
             {data?.map((data) => (
               <Customer_Tickets data={data} fun={fun}></Customer_Tickets>
             ))}
           </div>
         </div>
-        <div className="m-20 mx-20">
+        <div className="xl:m-20 xl:mx-20 md:mx-10 md:m-15 mx-5 m-10">
           <Task_Status
             Id={Id}
             notify={notify}
